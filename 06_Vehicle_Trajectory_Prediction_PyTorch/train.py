@@ -50,7 +50,7 @@ def main() :
     fixSeed()
     
     # Create DataLoader Instance
-    trainSet = NGSimDataset(join(args["path"], "TrainSet_us101.mat"), trackHist=trackHist, cavRatio=cavRatio)
+    trainSet = NGSimDataset(join(args["path"], "ValSet_us101.mat"), trackHist=trackHist, cavRatio=cavRatio)
     trainDataLoader = DataLoader(trainSet, batch_size=batchSize, shuffle=True, drop_last=True, collate_fn=trainSet.collateFunction)
     
     # Create Optimizer Instance
